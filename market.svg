@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="white"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+  <!-- Store roof -->
+  <path d="M3 9 l2-5 h14 l2 5"/>
+
+  <!-- Awning -->
+  <path d="M5 9 v2"/>
+  <path d="M9 9 v2"/>
+  <path d="M13 9 v2"/>
+  <path d="M17 9 v2"/>
+
+  <!-- Store body -->
+  <path d="M5 11 v9 h14 v-9"/>
+
+  <!-- Door -->
+  <path d="M11 20 v-5 h2 v5"/>
+</svg>

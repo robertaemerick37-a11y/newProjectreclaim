@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico">
+  <title>GetReclaim</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    #hero p {
+      text-align: center;
+      display: block;
+      margin: 20px auto 0;
+      color: #555;
+    }
+
+    #hero {
+      background-color: #f5f7fa;
+    }
+
+    #complaint-form input,
+    #complaint-form select,
+    #complaint-form textarea {
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    #complaint-form input:focus,
+    #complaint-form select:focus,
+    #complaint-form textarea:focus {
+      outline: none;
+      border-color: #1a73e8;
+    }
+
+    #services,
+    #testimonials {
+      border-top: 1px solid #eee;
+    }
+
+    section {
+      background-clip: padding-box;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav-container">
+    <div class="logo">
+      <a href="index.html">
+  <img src="talon.png" alt="GetReclaim logo">
+</a>
+</div>
+
+
+    <nav id="menu">
+      <button id="menu-close" aria-label="Close menu">✕</button>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+   <!-- SCAMS DROPDOWN -->
+    <div class="dropdown">
+      <a href="#" class="dropbtn">Scams ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="investment.html">Investment Scams</a></li>
+        <li><a href="crypto.html">Cryptocurrency Scams</a></li>
+        <li><a href="forex.html">Forex Scams</a></li>
+        <li><a href="Binary.html">Binary Scams</a></li>
+        <li><a href="phishing.html">Phishing Frauds</a></li>
+        <li><a href="estate.html">Real Estate Scams</a></li>
+        <li><a href="romance.html">Romance Scams</a></li>
+        <li><a href="butchering.html">Pig-Butchering Scams</a></li>
+        <li><a href="market.html">Marketplace Scams</a></li>
+        <li><a href="business.html">Business Email Compromise</a></li>
+        <li><a href="tax.html">Tax Related Scams</a></li>
+        <li><a href="government.html">Government Impersonation</a></li>
+      </ul>
+    </div>
+
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button id="menu-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO SLIDER -->
+<section id="hero-slider">
+  <div class="slider-container">
+
+    <div class="slide active" style="background-image: url('money.jpg');">
+      <div class="slide-content">
+        <h1>Recover Your Lost Funds</h1>
+        <p>We help victims of online scams take action.</p>
+        <button class="hero-cta">File a complaint</button>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('desk.jpg');">
+      <div class="slide-content">
+        <h1>About Us</h1>
+        <p>We assist individuals who have fallen victim to online financial scams.</p>
+        <button class="hero-cta">File a complaint</button>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('on.jpg');">
+      <div class="slide-content">
+        <h1>What We Do</h1>
+        <p>Expert guidance in recovering funds from Crypto, Forex, and Fraud.</p>
+        <button class="hero-cta">File a complaint</button>
+      </div>
+    </div>
+
+    <button class="prev" aria-label="Previous slide">&#10094;</button>
+    <button class="next" aria-label="Next slide">&#10095;</button>
+
+    <div class="slider-dashes">
+      <button class="dash active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="dash" data-slide="1" aria-label="Slide 2"></button>
+      <button class="dash" data-slide="2" aria-label="Slide 3"></button>
+    </div>
+
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    Falling victim to an online scam can be overwhelming and confusing. At GetReclaim, we support individuals affected by online financial fraud by helping them understand what steps to take next. We provide guidance on filing complaints, recognizing scam tactics, and navigating available options after a scam has occurred.
+
+Our focus is on clarity, awareness, and practical support—so victims are 
+not left to navigate the process alone. As you explore the types of scams we address below, we hope you find the information relevant to your experience and the guidance you are looking for.
+  </p>
+</section>
+
+<section id="scam-cards">
+  <div class="text-grid">
+    <h2>Scams We Deal With</h2>
+  </div>
+
+  <div class="scam-cards-grid">
+    <a href="crypto.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="crypto.svg" alt="">
+      </div>
+      <h3>Cryptocurrency Scams</h3>
+      <p>
+        Countless individuals engage in investment activities, only to fall
+        victim to fraudulent schemes.
+      </p>
+    </div>
+    </a>
+    <a href="investment.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="investment.svg" alt="">
+      </div>
+      <h3>Investment Scams</h3>
+      <p>
+        In recent years, cryptocurrency scam projects have increased,
+        requiring greater awareness and caution.
+      </p>
+    </div>
+    </a>
+    <a href="forex.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="forex.svg" alt="">
+      </div>
+      <h3>Forex Scams</h3>
+      <p>
+        Forex scams target eager traders, but we help expose schemes
+        and safeguard your investments.
+      </p>
+    </div>
+    </a>
+
+    <a href="Binary.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="binary.svg" alt="">
+      </div>
+      <h3>Binary Scams</h3>
+      <p>
+        Deceptive binary options brokers emerge yearly — we work to
+        protect victims from these schemes.
+      </p>
+    </div>
+    </a>
+
+    <a href="phishing.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="phishing.svg" alt="">
+      </div>
+      <h3>Phishing Fraud</h3>
+      <p>
+        Phishing scams targeting financial data evolve constantly,
+        but we help victims recover and respond.
+      </p>
+    </div>
+    </a>
+
+    <a href="estate.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="realestate.svg" alt="">
+      </div>
+      <h3>Real Estate Scam</h3>
+      <p>
+        From rental scams to fraudulent property purchases,
+        we assist in combating property fraud.
+      </p>
+    </div>
+    </a>
+
+     <a href="romance.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="romance.svg" alt="">
+      </div>
+      <h3>Romance Scams</h3>
+      <p>
+        Fraudsters build fake emotional relationships online to gain trust, 
+        then manipulate victims into sending money or financial information.
+      </p>
+    </div>
+    </a>
+
+
+    <a href="butchering.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="butchering.svg" alt="">
+      </div>
+      <h3>Pig-Butchering Scams</h3>
+      <p>
+        These long-term schemes combine emotional manipulation with fake investment opportunities
+        , gradually convincing victims to commit larger sums of money.
+      </p>
+    </div>
+    </a>
+
+     <a href="market.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="market.svg" alt="">
+      </div>
+      <h3>Marketplace Scams</h3>
+      <p>
+        Scammers exploit online marketplaces by advertising fake products, 
+        demanding upfront payments, or disappearing after a transaction is completed.
+      </p>
+    </div>
+    </a>
+
+    <a href="business.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="business.svg" alt="">
+      </div>
+      <h3>Business Email Compromise</h3>
+      <p>
+        Criminals impersonate executives, employees
+        , or trusted partners to trick businesses into sending payments or sensitive financial information.
+      </p>
+    </div>
+    </a>
+
+    <a href="tax.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="tax.svg" alt="">
+      </div>
+      <h3>Tax-related scams</h3>
+      <p>
+        Tax scams involve fraudulent messages claiming unpaid taxes
+        , refunds, or penalties, pressuring victims to act quickly or provide personal details.
+      </p>
+    </div>
+    </a>
+
+
+    <a href="government.html" class="scam-card-link">
+    <div class="scam-card">
+      <div class="scam-icon">
+        <img src="government.svg" alt="">
+      </div>
+      <h3>Government impersonation(IRS,SSA,Medicare)</h3>
+      <p>
+        Scammers pose as government agencies to threaten legal action, 
+        demand payments, or request sensitive information under false authority.
+      </p>
+    </div>
+    </a>
+
+  </div>
+</section>
+
+
+<!-- TESTIMONIALS -->
+ <section id="testimonials">
+  <h2>TESTIMONIALS</h2>
+
+  <div class="testimonials-grid">
+
+    <!-- Column 1 -->
+    <div class="testimonial-column">
+      
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="john.jpg" alt="John Doe">
+          <span class="testimonial-name">John D.</span>
+        </div>
+        <p>
+          I was skeptical at first, but the support I received was professional and easy to understand.
+           Communication was clear, and I appreciated how transparent everything was.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="sarah.jpg" alt="Sarah Lee">
+          <span class="testimonial-name">Sarah L.</span>
+        </div>
+        <p>
+          The process was explained thoroughly, and communication remained consistent throughout.
+           I valued the straightforward and respectful approach.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Column 2 -->
+    <div class="testimonial-column">
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="michael.jpg" alt="Michael Brown">
+          <span class="testimonial-name">Michael B.</span>
+        </div>
+        <p>
+          I’ve dealt with many services over the years, and clear communication makes all the difference.
+           The approach here was patient, honest, and easy to follow, which I appreciated.
+        </p>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-header">
+          <img src="harry.jpg" alt="Harry Wills">
+          <span class="testimonial-name">Harry W.</span>
+        </div>
+        <p>
+          At my age, trust matters a lot. I appreciated how everything was explained clearly and without pressure.
+           The guidance was respectful, straightforward, and helped me understand my situation better.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- FORM -->
+<section id="complaint-form">
+  <h2>File a complaint</h2>
+
+  <form id="complaintForm" action="javascript:void(0);">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Phone Number" required>
+    <input type="text" name="scam" placeholder="Type Of Scam" required>
+
+    <select name="country" required>
+      <option value="">Select Country</option>
+      <option>Argentina</option>
+  <option>Australia</option>
+  <option>Austria</option>
+
+  <option>Belgium</option>
+  <option>Brazil</option>
+  <option>Bulgaria</option>
+
+  <option>Canada</option>
+  <option>Chile</option>
+  <option>China</option>
+  <option>Colombia</option>
+  <option>Croatia</option>
+  <option>Czech Republic</option>
+
+  <option>Denmark</option>
+  <option>Dominican Republic</option>
+
+  <option>Egypt</option>
+  <option>Estonia</option>
+
+  <option>Finland</option>
+  <option>France</option>
+
+  <option>Germany</option>
+  <option>Ghana</option>
+  <option>Greece</option>
+
+  <option>Hungary</option>
+
+  <option>India</option>
+  <option>Indonesia</option>
+  <option>Ireland</option>
+  <option>Israel</option>
+  <option>Italy</option>
+
+  <option>Japan</option>
+
+  <option>Kenya</option>
+
+  <option>Latvia</option>
+  <option>Lithuania</option>
+
+  <option>Malaysia</option>
+  <option>Mexico</option>
+
+  <option>Netherlands</option>
+  <option>New Zealand</option>
+  <option>Nigeria</option>
+  <option>Norway</option>
+
+  <option>Pakistan</option>
+  <option>Philippines</option>
+  <option>Poland</option>
+  <option>Portugal</option>
+
+  <option>Romania</option>
+
+  <option>Saudi Arabia</option>
+  <option>Singapore</option>
+  <option>Slovakia</option>
+  <option>Slovenia</option>
+  <option>South Africa</option>
+  <option>South Korea</option>
+  <option>Spain</option>
+  <option>Sweden</option>
+  <option>Switzerland</option>
+
+  <option>Thailand</option>
+  <option>Turkey</option>
+
+  <option>Ukraine</option>
+  <option>United Arab Emirates</option>
+  <option>United Kingdom</option>
+  <option>United States</option>
+
+  <option>Vietnam</option>
+    </select>
+
+    <textarea name="message"placeholder="Describe what happened" rows="4"></textarea>
+   <button type="submit" id="submitBtn" class="submit-btn">
+  <span class="btn-text">Submit complaint</span>
+  <span class="spinner"></span>
+</button>
+
+  </form>
+
+  <div id="form-success">
+    <h2>Your complaint has been submitted</h2>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-main">
+
+    <!-- CONTACT -->
+    <div class="footer-col">
+      <h4>  Address </h4>
+      <p>
+         6345 East T Avenue,<br>
+        Vicksburg, MI 49097
+      </p>
+
+      <p><strong>Chat with us:</strong></p>
+
+<div class="chat-buttons">
+  <a
+    href="https://wa.me/19432609157"
+    target="_blank"
+    class="chat-btn whatsapp"
+    aria-label="Chat on WhatsApp"
+  >
+    <img src="whatsapp.svg" alt="WhatsApp">
+    WhatsApp
+  </a>
+
+  <a
+    href="https://t.me/19432609157"
+    target="_blank"
+    class="chat-btn telegram"
+    aria-label="Chat on Telegram"
+  >
+    <img src="telegram.svg" alt="Telegram">
+    Telegram
+  </a>
+</div>
+
+
+      <p><strong>Email:</strong> 
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gettreclaim@gmail.com" target="_blank">
+          gettreclaim@gmail.com</a></p>
+    </div>
+
+    <!-- LINKS -->
+    <div class="footer-col">
+      <h4>Useful Links</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">› Home</a></li>
+        <li><a href="about.html">› About us</a></li>
+        <li><a href="contact.html">› Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- BRAND -->
+    <div class="footer-col">
+      <h4>GetReclaim</h4>
+      <p class="footer-tagline">
+        Shining Light on Scam Recovery!
+      </p>
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT BAR -->
+  <div class="footer-bottom">
+    © Copyright <strong>GetReclaim</strong>. All Rights Reserved
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  (function(){
+    emailjs.init("wi6y_9u7aU7oF408i");
+  })();
+</script>
+
+<script src="script.js"></script>
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" aria-label="Scroll to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+    xmlns="http://www.w3.org/2000/svg">
+    <path d="M6 14l6-6 6 6"
+      stroke="white"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"/>
+  </svg>
+</button>
+</body>
+</html>

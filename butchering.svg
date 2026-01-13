@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     fill="none"
+     stroke="white"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round">
+
+  <!-- Pig body -->
+  <path d="M4 13
+           c0-3 3-5 8-5
+           s8 2 8 5
+           v3
+           c0 1-1 2-2 2
+           H6
+           c-1 0-2-1-2-2z"/>
+
+  <!-- Pig ear -->
+  <path d="M7 8 L5 6"/>
+
+  <!-- Pig snout -->
+  <ellipse cx="16" cy="13" rx="1.5" ry="1"/>
+
+  <!-- Pig leg -->
+  <path d="M8 18 v2"/>
+  <path d="M14 18 v2"/>
+
+  <!-- Knife -->
+  <path d="M19 4 l3 3"/>
+  <path d="M18 5 l3 3"/>
+</svg>
