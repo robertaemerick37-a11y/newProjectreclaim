@@ -1,0 +1,24 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Machine Body -->
+  <rect x="25" y="20" width="70" height="80" rx="10" stroke="black" stroke-width="4" fill="white"/>
+
+  <!-- Screen -->
+  <rect x="35" y="35" width="50" height="30" stroke="black" stroke-width="3" fill="white"/>
+
+  <!-- Reel Symbols -->
+  <circle cx="45" cy="50" r="4" fill="black"/>
+  <circle cx="60" cy="50" r="4" fill="black"/>
+  <circle cx="75" cy="50" r="4" fill="black"/>
+
+  <!-- Lever -->
+  <line x1="95" y1="40" x2="110" y2="40" stroke="black" stroke-width="4"/>
+  <circle cx="112" cy="40" r="5" fill="black"/>
+
+  <!-- Coin Slot -->
+  <rect x="50" y="70" width="20" height="8" fill="black"/>
+
+  <!-- Base -->
+  <rect x="40" y="95" width="40" height="6" fill="black"/>
+
+</svg>
