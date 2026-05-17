@@ -1513,3 +1513,29 @@ main {
   }
 }
 
+/* Centering the single testimonial below the grid */
+.testimonial-row-center {
+  max-width: 1100px;
+  margin: 40px auto 0; /* 40px gap from the grid above */
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-row-center .testimonial-card {
+  /* Match the width of the cards in the grid for consistency */
+  width: 100%;
+  max-width: 530px; 
+}
+
+/* Ensure it remains responsive on mobile */
+@media (max-width: 768px) {
+  .testimonial-row-center {
+    margin-top: 24px;
+    padding: 0;
+  }
+  
+  .testimonial-row-center .testimonial-card {
+    max-width: 100%;
+  }
+}
+
