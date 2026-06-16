@@ -1301,8 +1301,8 @@ main {
 }
 
 .page-banner h1 {
-  margin: 4 !important;
-  padding: 2 !important;
+  margin: 4px !important;
+  padding: 2px !important;
   font-size: 35px;
   font-weight: 600;
   line-height: 1.1; /* CRITICAL */
@@ -1539,3 +1539,134 @@ main {
   }
 }
 
+/* ===== Recovery Stats ===== */
+#recovery-stats {
+  background: #f1eef9;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+/* Header text alignment and spacing */
+.stats-header {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  text-align: left;
+}
+
+.stats-header p {
+  color: #444;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Main statistics grid, 4 columns for desktop */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual statistic card styling */
+.stat-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  /* subtle border and shadow from line 1083-1084 referenced for consistency */
+  border: 1px solid rgba(109, 91, 208, 0.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Internal padding and alignment */
+.stat-inner {
+  width: 100%;
+}
+
+/* Interaction effect */
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Main large number text */
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+/* The central text label (e.g., 'Total Funds Recovered') */
+.stat-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a73e8; /* Default Blue */
+  margin-bottom: 6px;
+}
+
+/* Secondary detail text at the bottom */
+.stat-subtext {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* === SPECIFIC COLOR CLASSES (MATCHING IMAGE_0.PNG) === */
+
+/* Stat 1: Total Funds Recovered (Green) */
+.stat-number.green { color: #22c55e; } /* Matching green-500 from tailwind palette */
+
+/* Stat 2: Success Rate (Blue) */
+.stat-number.blue { color: #1e40af; } /* Deeper blue than label */
+
+/* Stat 3: Cases Completed (Purple) */
+.stat-number.purple { color: #7e22ce; } /* Pure purple */
+
+/* Stat 4: Average Timeline (Gold) */
+.stat-number.gold { color: #b45309; } /* Amber/Gold tone */
+
+/* === RESPONSIVE BREAKPOINTS === */
+
+/* Medium Devices (Tablets, e.g., 2 per row) */
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Small Devices (Mobiles, 1 per row) */
+@media (max-width: 600px) {
+  #recovery-stats {
+    padding: 60px 16px;
+  }
+
+  .stats-header {
+    margin-bottom: 40px;
+  }
+
+  .stats-header h2 {
+    font-size: 24px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stat-card {
+    padding: 24px;
+  }
+
+  .stat-number {
+    font-size: 40px;
+  }
+}

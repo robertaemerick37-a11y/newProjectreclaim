@@ -107,10 +107,12 @@ const observer = new IntersectionObserver(
 );
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Mark every section as a reveal target...
   document.querySelectorAll("section").forEach(section => {
     section.classList.add("reveal");
-    observer.observe(section);
   });
+  // ...then observe ALL reveal elements (sections + inner cards/headers)
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 });
 
 // ===== HERO SLIDER + DASHES =====
