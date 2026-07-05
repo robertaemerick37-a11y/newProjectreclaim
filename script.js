@@ -192,7 +192,7 @@ heroButtons.forEach(button => {
   });
 });
 
-// ===== SCROLL TO TOP =====
+// ===== SCROLL TO TOP BAR BUTTON =====
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("scrollTopBtn");
 
@@ -214,4 +214,55 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: "smooth"
     });
   });
+});
+
+// ===== STATISTICS COUNTER ANIMATION =====
+document.addEventListener("DOMContentLoaded", () => {
+  const counterElement = document.getElementById("success-rate-stat");
+  if (!counterElement) return;
+
+  const startValue = 1;
+  const targetValue = 95.7;
+  const duration = 1500; // Animation duration in milliseconds (1.5 seconds)
+
+  const runCounter = () => {
+    let startTime = null;
+
+    const animate = (currentTime) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+      
+      // Linear interpolation between 1 and 95.7
+      const currentValue = (progress * (targetValue - startValue) + startValue).toFixed(1);
+      
+      counterElement.textContent = `${currentValue}%`;
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  };
+
+  // Wire it up to trigger only when the element is visible on screen
+  const statObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        runCounter();
+        statObserver.unobserve(entry.target); // Stop observing once animated
+      }
+    });
+  }, { threshold: 0.2 }); // Triggers when 20% of the element is visible
+
+  statObserver.observe(counterElement);
+});
+
+// ===== FORCE SCROLL TO TOP ON REFRESH =====
+if (history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+}
+
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
 });
