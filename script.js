@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const successSection = document.getElementById("form-success");
   const submitBtn = document.getElementById("submitBtn");
 
-    if (!form) return;
+  if (!form) return;
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -33,9 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
       submitBtn.disabled = false;
     });
   });
-})
-
-
+});
 
 // ===== NAV ACTIVE STATE =====
 const navLinks = document.querySelectorAll("#menu a");
@@ -82,17 +80,18 @@ if (menuClose && menu) {
     menuToggle?.setAttribute("aria-expanded", "false");
   });
 }
+
 // ===== DROPDOWN MENU =====
-  document.addEventListener("DOMContentLoaded", () => {
-    const dropBtn = document.querySelector(".dropbtn");
+document.addEventListener("DOMContentLoaded", () => {
+  const dropBtn = document.querySelector(".dropbtn");
+  if (!dropBtn) return;
 
-    dropBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      dropBtn.nextElementSibling.classList.toggle("show-dropdown");
-    });
+  dropBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    dropBtn.nextElementSibling.classList.toggle("show-dropdown");
   });
+});
 
-  
 // ===== SCROLL REVEAL =====
 const observer = new IntersectionObserver(
   entries => {
@@ -107,11 +106,9 @@ const observer = new IntersectionObserver(
 );
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Mark every section as a reveal target...
   document.querySelectorAll("section").forEach(section => {
     section.classList.add("reveal");
   });
-  // ...then observe ALL reveal elements (sections + inner cards/headers)
   document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 });
 
@@ -139,18 +136,17 @@ function showSlide(index) {
   }
 }
 
-// Arrow controls
 if (nextBtn && prevBtn) {
   nextBtn.addEventListener("click", () => showSlide(currentSlide + 1));
   prevBtn.addEventListener("click", () => showSlide(currentSlide - 1));
 }
 
-// Dash controls
 dashes.forEach(dash => {
   dash.addEventListener("click", () => {
     showSlide(Number(dash.dataset.slide));
   });
 });
+
 // ===== HERO SWIPE SUPPORT (MOBILE) =====
 const hero = document.getElementById("hero-slider");
 
@@ -170,94 +166,46 @@ if (hero) {
     const diffX = endX - startX;
     const diffY = endY - startY;
 
-    // Ignore vertical scroll
     if (Math.abs(diffX) < Math.abs(diffY)) return;
 
     if (Math.abs(diffX) > 50) {
       if (diffX < 0) {
-        // Swipe LEFT
         showSlide(currentSlide + 1);
       } else {
-        // Swipe RIGHT
         showSlide(currentSlide - 1);
       }
     }
   }, { passive: true });
 }
 
-
-
-// ===== HERO CTA SCROLL =====
-const heroButtons = document.querySelectorAll(".hero-cta");
+// ===== HERO CTA SCROLL (SUPPORTING BOTH MODER AND HISTORIC CTA SELECTORS) =====
+const heroButtons = document.querySelectorAll(".hero-cta-modern, .hero-cta");
 const complaintSection = document.getElementById("complaint-form");
 
 heroButtons.forEach(button => {
   button.addEventListener("click", () => {
-    complaintSection.scrollIntoView({ behavior: "smooth" });
+    if (complaintSection) {
+      complaintSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "contact.html";
+    }
   });
 });
 
-// ===== ABOUT SPLIT REVEALS =====
-document.addEventListener("DOMContentLoaded", () => {
-  const revealItems = document.querySelectorAll(
-    ".reveal-left, .reveal-up"
-  );
-
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.2 }
-  );
-
-  revealItems.forEach(item => observer.observe(item));
-});
-
-
-// ===== SOLUTION SECTION REVEAL =====
-const solutionReveal = document.querySelector(".solution-reveal");
-
-if (solutionReveal) {
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.25
-    }
-  );
-
-  observer.observe(solutionReveal);
-}
-
+// ===== SCROLL TO TOP =====
 document.addEventListener("DOMContentLoaded", function () {
   const btn = document.getElementById("scrollTopBtn");
-  let lastScrollTop = 0;
 
   if (!btn) return;
 
   window.addEventListener("scroll", function () {
-    const currentScroll =
-      window.pageYOffset || document.documentElement.scrollTop;
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-    // scrolling DOWN and past threshold
-    if (currentScroll > lastScrollTop && currentScroll > 200) {
-      btn.classList.add("show");      // ← ADD HERE
+    if (currentScroll > 200) {
+      btn.classList.add("show");
     } else {
-      btn.classList.remove("show");   // ← REMOVE HERE
+      btn.classList.remove("show");
     }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
 
   btn.addEventListener("click", function () {
@@ -267,4 +215,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-

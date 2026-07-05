@@ -28,7 +28,7 @@ p {
 #hero-slider {
   position: relative;
   width: 100vw;      /* full browser width */
-  height: 60vh;
+  height: 85vh;      /* Increased to match the tall reference look */
   overflow: hidden;
   margin: 0;
   touch-action: pan-y; /* allows vertical scrolling on touch devices */
@@ -161,9 +161,6 @@ section:not(#hero-slider) {
 
   /* Gradient instead of flat blue */
   background: linear-gradient(135deg, #6d5bd0, #4b3fbf);
-  box-shadow:
-    0 10px 25px rgba(109, 91, 208, 0.6),
-    0 0 0 6px #171836;
 
   border-radius: 50%;
   display: flex;
@@ -1883,5 +1880,98 @@ main {
   }
   .lets-work h2 {
     font-size: 34px;
+  }
+}
+
+/* ===== MODERN SPLIT HERO ENGINE ===== */
+.slide-content-modern {
+  width: 100%;
+  max-width: 1400px;              /* Expanded horizontal bound constraint to let it stretch wide */
+  margin: 0 auto;
+  padding: 80px 60px;            /* Generous padding swells the internal visual container vertically */
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  text-align: left;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out 0.2s;
+}
+
+/* Activate content reveal transitions when slide toggles */
+.slide.active .slide-content-modern {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Left Column elements */
+.hero-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-tagline {
+  color: #3b82f6; /* Accent color text link style */
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.slide-content-modern h1 {
+  font-size: clamp(32px, 4.5vw, 56px) !important;
+  color: #ffffff !important;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0;
+}
+
+/* Right Column elements */
+.hero-right-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.slide-content-modern p {
+  font-size: clamp(15px, 1.2vw, 18px) !important;
+  line-height: 1.6 !important;
+  color: #e5e7eb !important;
+  margin: 0 0 30px 0 !important;
+  text-align: left !important;
+}
+
+/* Modern Pill Button adjustments matching style */
+.hero-cta-modern {
+  background-color: #1a73e8;
+  color: white;
+  padding: 14px 36px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
+}
+
+.hero-cta-modern:hover {
+  background-color: #1558b0;
+  transform: translateY(-2px);
+}
+
+/* Responsive optimization rules for smaller viewports */
+@media (max-width: 900px) {
+  .slide-content-modern {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 40px 24px;
+  }
+  
+  .slide-content-modern p {
+    margin-bottom: 20px !important;
   }
 }
