@@ -1557,10 +1557,10 @@ main {
   line-height: 1.6;
 }
 
-/* Main statistics grid, 4 columns for desktop */
+/* Main statistics grid, 3 columns for desktop */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr); /* Updated from 4 to 3 columns */
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
@@ -1974,4 +1974,39 @@ main {
   .slide-content-modern p {
     margin-bottom: 20px !important;
   }
+}
+
+/* ========================================================
+   ALIGNMENT FIXES FOR RECOVERY STATS & TESTIMONIALS
+======================================================== */
+
+/* Disables the restrictive 700px global parent container constraint */
+#recovery-stats > *, 
+#testimonials > * {
+  max-width: none;
+  margin-left: unset;
+  margin-right: unset;
+}
+
+/* Re-centers and constraints sections structurally within standard boundaries */
+.stats-header,
+.testimonials-grid,
+.testimonial-row-center {
+  max-width: 1100px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Centers section titles and accent line markers cleanly */
+#recovery-stats h2,
+#testimonials h2 {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#recovery-stats h2::after,
+#testimonials h2::after {
+  margin-left: 0;
 }
